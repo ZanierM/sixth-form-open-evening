@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mayfield Grammar School Gravesend Sixth Form</title>
+<style>
+:root{color-scheme:dark;--white:#ffffff;--soft:#ede3f3;--green:#d5ed91;--edge:#ffffff32}
+*{box-sizing:border-box}
+body{margin:0;background:#180f20;color:var(--white);font-family:Arial,sans-serif}
+#screen{position:absolute;left:50%;top:50%;width:1920px;height:1080px;overflow:hidden;transform-origin:center;background:radial-gradient(ellipse at 92% 0%,#684279 0%,transparent 52%),linear-gradient(132deg,#2b1738,#462955)}
+header,footer{position:absolute;left:90px;right:90px;display:flex;align-items:center;justify-content:space-between}
+header{top:48px;border-bottom:1px solid var(--edge);padding-bottom:32px}
+.brand{font-size:34px;font-weight:700}.event,.kicker{font-size:25px;letter-spacing:.15em;text-transform:uppercase;color:var(--green);font-weight:700}
+.slide{position:absolute;inset:166px 90px 114px;display:flex;flex-direction:column;justify-content:center;gap:32px}
+.slide[hidden]{display:none}
+h1,h2,p,figure{margin:0}h1,h2{font-family:Georgia,serif;font-weight:400;letter-spacing:-.045em;line-height:1.02}
+h1{font-size:126px;max-width:1480px}h1 span{display:block;color:var(--green)}
+h2{font-size:88px}.intro{font-size:40px;color:var(--soft)}
+.rule{width:125px;height:4px;background:var(--green);margin:12px 0}
+.cards,.photos{display:grid;gap:24px;grid-template-columns:repeat(3,minmax(0,1fr))}
+.cards.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.card{padding:42px 40px;min-height:286px;border:1px solid var(--edge);background:#ffffff0c;border-radius:16px;display:flex;flex-direction:column;justify-content:center;gap:13px}
+.card strong{color:var(--green);font-size:132px;line-height:1;font-weight:500;font-variant-numeric:tabular-nums}
+.card span{font-size:37px;line-height:1.15;font-weight:700}
+.note{font-size:27px;color:var(--soft)}
+.photo{height:375px;border:2px dashed #f0d5ed72;border-radius:14px;background:linear-gradient(150deg,#543958,#36243e);display:grid;place-items:center;text-align:center;color:var(--soft);font-size:31px;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover;min-height:0}
+figcaption{font-size:27px;color:var(--soft);margin-top:16px}
+footer{bottom:32px;gap:24px;padding-top:23px;border-top:1px solid var(--edge)}
+.steps,.controls{display:flex;gap:10px;align-items:center}.steps button{width:44px;height:11px;padding:0;border:none;border-radius:10px;background:#ffffff4c}.steps button[aria-current=true]{background:var(--green)}
+button{font:inherit;cursor:pointer;color:inherit}.controls button{background:#ffffff10;border:1px solid var(--edge);border-radius:8px;padding:8px 14px;font-size:22px}button:focus-visible{outline:3px solid var(--green);outline-offset:5px}.status{font-size:22px;color:var(--soft);margin-left:10px}
+
+#screen{touch-action:pan-y pinch-zoom}
+.hint{display:none}
+@media screen and (orientation:portrait){
+  #screen{width:900px;height:1400px}
+  header,footer{left:52px;right:52px}
+  header{gap:32px}
+  .brand{font-size:30px}
+  .slide{inset:195px 52px 150px;gap:24px}
+  h1{font-size:100px}h2{font-size:76px}
+  .cards,.cards.two{grid-template-columns:1fr;gap:15px}
+  .card{min-height:155px;padding:22px 30px;flex-direction:row;align-items:center;justify-content:flex-start;gap:30px}
+  .card strong{font-size:90px;min-width:200px}
+  .photos{grid-template-columns:1fr;gap:22px}
+  .photo{height:168px}
+  figcaption{margin-top:7px}
+  footer{flex-wrap:wrap}
+  .hint{display:inline;font-size:22px;color:var(--soft)}
+}
+@page{size:20in 11.25in;margin:0}
+@media print{
+  *{print-color-adjust:exact;-webkit-print-color-adjust:exact}
+  #screen{position:static;width:auto;height:auto;transform:none!important;overflow:visible;background:none}
+  header,footer{display:none}
+  .slide,.slide[hidden]{position:relative;inset:auto;display:flex;width:1920px;height:1080px;padding:135px 90px 105px;break-after:page;background:radial-gradient(ellipse at 92% 0%,#684279 0%,transparent 52%),linear-gradient(132deg,#2b1738,#462955)}
+  .slide:last-of-type{break-after:auto}
+  .slide::before{content:"Mayfield Grammar School Gravesend Sixth Form";position:absolute;top:50px;left:90px;right:90px;padding-bottom:31px;border-bottom:1px solid var(--edge);font-size:34px;font-weight:700}
+  .slide::after{content:attr(data-page) " / 4";position:absolute;bottom:50px;left:90px;right:90px;padding-top:24px;border-top:1px solid var(--edge);font-size:25px;color:var(--green)}
+}
+</style>
+</head>
+<body>
+<main id="screen">
+<header><div class="brand">Mayfield Grammar School Gravesend Sixth Form</div><div class="event">Open Evening</div></header>
+<section class="slide" data-page="1" data-title="Welcome" aria-label="Welcome">
+  <p class="kicker">Welcome to our Open Evening</p>
+  <h1>Mayfield Grammar School <span>Gravesend Sixth Form</span></h1>
+  <div class="rule"></div>
+  <p class="intro">A level results · University destinations · Results day</p>
+</section>
+<section class="slide" data-page="2" data-title="A level results" aria-label="A level results" hidden>
+  <h2>A level results</h2>
+  <div class="cards">
+    <div class="card"><strong>28%</strong><span>A*–A grades</span></div>
+    <div class="card"><strong>57%</strong><span>A*–B grades</span></div>
+    <div class="card"><strong>81%</strong><span>A*–C grades</span></div>
+  </div>
+  <p class="note">Illustrative figures · Percentage of A level entries in each grade band</p>
+</section>
+<section class="slide" data-page="3" data-title="University destinations" aria-label="University destinations" hidden>
+  <h2>University destinations</h2>
+  <div class="cards two">
+    <div class="card"><strong>112</strong><span>Students who went to university</span></div>
+    <div class="card"><strong>96</strong><span>Students who went to their first-choice university</span></div>
+  </div>
+  <p class="note">Illustrative figures · Student counts from the same example cohort</p>
+</section>
+<section class="slide" data-page="4" data-title="Results day" aria-label="Results day" hidden>
+  <h2>Results day</h2>
+  <div class="photos">
+    <figure><div class="photo">Results-day photo</div><figcaption>Example caption · A* A A</figcaption></figure>
+    <figure><div class="photo">Results-day photo</div><figcaption>Example caption · A A B</figcaption></figure>
+    <figure><div class="photo">Results-day photo</div><figcaption>Example caption · A* A B</figcaption></figure>
+  </div>
+</section>
+<footer>
+  <nav class="steps" aria-label="Choose a slide"><span class="status"></span></nav>
+  <span class="hint">Swipe to change slide</span>
+  <div class="controls">
+    <button id="previous" aria-label="Previous slide">←</button>
+    <button id="pause">Pause</button>
+    <button id="next" aria-label="Next slide">→</button>
+    <button id="full">Full screen</button>
+  </div>
+</footer>
+</main>
+<script>
+const screenElement = document.getElementById('screen');
+const slides = Array.from(document.querySelectorAll('.slide'));
+const status = document.querySelector('.status');
+const pauseButton = document.getElementById('pause');
+const fullButton = document.getElementById('full');
+const intervalMs = 10000;
+let active = 0;
+let timer;
+let paused = false;
+
+const steps = slides.map((slide, index) => {
+  const button = document.createElement('button');
+  button.setAttribute('aria-label', slide.dataset.title);
+  button.addEventListener('click', () => showSlide(index));
+  status.before(button);
+  return button;
+});
+
+function fit() {
+  const scale = Math.min(window.innerWidth / screenElement.offsetWidth, window.innerHeight / screenElement.offsetHeight);
+  screenElement.style.transform = 'translate(-50%, -50%) scale(' + scale + ')';
+}
+
+function showSlide(index) {
+  active = (index + slides.length) % slides.length;
+  slides.forEach((slide, position) => {
+    slide.hidden = position !== active;
+    steps[position].setAttribute('aria-current', String(position === active));
+  });
+  status.textContent = (active + 1) + ' / ' + slides.length;
+  clearTimeout(timer);
+  if (!paused) timer = setTimeout(() => showSlide(active + 1), intervalMs);
+}
+
+function togglePause() {
+  paused = !paused;
+  pauseButton.textContent = paused ? 'Resume' : 'Pause';
+  showSlide(active);
+}
+
+async function toggleFullScreen() {
+  try {
+    if (document.fullscreenElement) await document.exitFullscreen();
+    else await document.documentElement.requestFullscreen();
+  } catch {
+    fullButton.textContent = 'Use browser full screen';
+  }
+}
+
+document.getElementById('previous').onclick = () => showSlide(active - 1);
+document.getElementById('next').onclick = () => showSlide(active + 1);
+pauseButton.onclick = togglePause;
+fullButton.onclick = toggleFullScreen;
+document.addEventListener('fullscreenchange', () => {
+  fullButton.textContent = document.fullscreenElement ? 'Exit full screen' : 'Full screen';
+});
+document.addEventListener('keydown', event => {
+  if (event.altKey || event.ctrlKey || event.metaKey || event.defaultPrevented) return;
+  if (event.key === 'ArrowLeft') showSlide(active - 1);
+  if (event.key === 'ArrowRight') showSlide(active + 1);
+  if (event.code === 'Space' && event.target === document.body) {
+    event.preventDefault();
+    togglePause();
+  }
+});
+let touchStart;
+screenElement.addEventListener('touchstart', event => {
+  touchStart = event.touches.length === 1 ? event.touches[0] : null;
+}, {passive:true});
+screenElement.addEventListener('touchcancel', () => { touchStart = null; });
+screenElement.addEventListener('touchend', event => {
+  if (!touchStart) return;
+  const end = event.changedTouches[0];
+  const dx = end.clientX - touchStart.clientX;
+  const dy = end.clientY - touchStart.clientY;
+  touchStart = null;
+  if (Math.abs(dx) > 38 && Math.abs(dx) > Math.abs(dy) * 1.4) {
+    paused = true;
+    pauseButton.textContent = 'Resume';
+    showSlide(active + (dx < 0 ? 1 : -1));
+  }
+}, {passive:true});
+window.addEventListener('resize', fit);
+fit();
+showSlide(0);
+</script>
+</body>
+</html>
